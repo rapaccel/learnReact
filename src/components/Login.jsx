@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import Input from "./Input";
 export default function Login() {
   const email=useRef();
   const password=useRef();
@@ -15,16 +16,10 @@ export default function Login() {
       <h2>Login</h2>
 
       <div className="control-row">
-        <div className="control no-margin">
-          <label htmlFor="email">Email</label>
-          <input id="email" type="email" name="email" ref={email}/>
-        </div>
+        <Input label="email" name="email" id="email" type="email" ref={email}/>
+        
 
-        <div className="control no-margin">
-          <label htmlFor="password">Password</label>
-          <input id="password" type="password" ref={password} name="password"
-           />
-        </div>
+        <Input label="password" name="password" id="password" type="password" ref={password}/>
       </div>
 
       <p className="form-actions">
